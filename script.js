@@ -787,7 +787,7 @@ async function openCareerDetails() {
     try {
 
         // Save Student
-        const studentResponse = await fetch("http://https://carrerpath-backend.onrender.com/api/students", {
+        const studentResponse = await fetch("https://carrerpath-backend.onrender.com/api/students", {
 
             method: "POST",
 
