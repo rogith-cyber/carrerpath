@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "http://https://carrerpath-backend.onrender.com/api";
 
 // ========== GLOBAL NAVIGATION (for multi‑page) ==========
 // Since each page is a separate HTML, we use simple links.
@@ -135,7 +135,7 @@ async function submitFooterForm() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/contact", {
+        const response = await fetch("http://https://carrerpath-backend.onrender.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -787,7 +787,7 @@ async function openCareerDetails() {
     try {
 
         // Save Student
-        const studentResponse = await fetch("http://localhost:5000/api/students", {
+        const studentResponse = await fetch("http://https://carrerpath-backend.onrender.com/api/students", {
 
             method: "POST",
 
@@ -817,7 +817,7 @@ async function openCareerDetails() {
         }
 
         // Check Career
-        const careerResponse = await fetch("http://localhost:5000/api/careers/open", {
+        const careerResponse = await fetch("https://carrerpath-backend.onrender.com/api/careers/open", {
 
             method: "POST",
 
@@ -902,7 +902,7 @@ async function showCareerSuggestions() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/careers/search?q=${encodeURIComponent(query)}`
+            `https://carrerpath-backend.onrender.com/api/careers/search?q=${encodeURIComponent(query)}`
         );
 
         const result = await response.json();
