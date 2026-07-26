@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    fetch(`http://localhost:5000/api/careers/${encodeURIComponent(career)}`)
+    fetch(`https://carrerpath-backend.onrender.com/api/careers/${encodeURIComponent(career)}`)
         .then(response => response.json())
         .then(result => {
 
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("careerOverview").textContent =
                     "🤖 AI is generating this career. Please wait...";
 
-                fetch("http://localhost:5000/api/careers/generate", {
+                fetch("https://carrerpath-backend.onrender.com/api/careers/generate", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
