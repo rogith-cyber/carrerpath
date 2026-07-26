@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath — Student Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-orb bg-orb--1"></div><div class="bg-orb bg-orb--2"></div><div class="bg-orb bg-orb--3"></div><div class="grid-bg"></div>
+
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo"><span class="navbar__logo-icon">🎓</span> CareerPath</a>
+            <ul class="navbar__links" id="navLinks">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="careers.html" class="navbar__link">Careers</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+            <a href="student-form.html" class="navbar__cta">🚀 Get Started</a>
+            <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="app-wrapper">
+        <div class="form-container">
+            <div class="progress-bar" id="progressBar">
+                <span class="progress-bar__label progress-bar__label--active">Info</span>
+                <div class="progress-bar__step progress-bar__step--active" data-step="1"></div>
+                <span class="progress-bar__label">Career</span>
+                <div class="progress-bar__step" data-step="2"></div>
+                <span class="progress-bar__label">Details</span>
+                <div class="progress-bar__step" data-step="3"></div>
+                <span class="progress-bar__label">Connect</span>
+                <div class="progress-bar__step" data-step="4"></div>
+                <span class="progress-bar__label">Done</span>
+            </div>
+
+            <!-- Step 1: Student Info -->
+            <div class="form-card" id="formStep1">
+                <h2 style="font-weight:700;font-size:1.5rem;">Student Information</h2>
+                <p style="color:var(--text-tertiary);margin-bottom:24px;">Tell us about yourself.</p>
+                <div class="form-group"><label class="form-label">Full Name</label><input type="text" class="form-input" placeholder="Your full name" id="fullName"></div>
+                <div class="form-row">
+                    <div class="form-group"><label class="form-label">Class</label><select class="form-select" id="class"><option value="">Select</option><option>11th</option><option>12th</option></select></div>
+                    <div class="form-group"><label class="form-label">Gender</label><select class="form-select" id="gender"><option value="">Select</option><option>Male</option><option>Female</option></select></div>
+                </div>
+                <div class="form-group"><label class="form-label">Phone Number</label><input type="tel" class="form-input" placeholder="+91 98765 43210" id="phone"></div>
+                <div class="form-group">
+    <label class="form-label">Email Address</label>
+    <input
+        type="email"
+        class="form-input"
+        placeholder="example@gmail.com"
+        id="email"
+        autocomplete="email"
+        required
+    >
+    <small id="emailError" class="error-message"></small>
+</div>
+              <div class="form-group">
+    <label class="form-label">School Name</label>
+    <input type="text" class="form-input" placeholder="Your school" id="school">
+</div>
+
+<div class="location-row">
+
+    <div class="form-group">
+        <label class="form-label">State</label>
+        <select id="state" class="form-select">
+            <option value="">Select State</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">District</label>
+        <select id="district" class="form-select">
+            <option value="">Select District</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="continue-wrapper">
+    <button class="btn btn--primary" onclick="nextStep(2)">
+        Continue →
+    </button>
+</div>
+</div>
+
+</div>
+<!-- END OF STEP 1 -->
+            <!-- Step 2: Career with autocomplete -->
+            <div class="form-card" id="formStep2" style="display:none;">
+                <h2 style="font-weight:700;font-size:1.5rem;">Choose Your Dream Career</h2>
+                <p style="color:var(--text-tertiary);margin-bottom:24px;">Start typing to see suggestions.</p>
+                <div class="search-box">
+                    <span class="search-box__icon">🔍</span>
+                    <input type="text" class="search-box__input" placeholder="Type a career..." id="careerSearch" autocomplete="off" oninput="showCareerSuggestions()" onfocus="showCareerSuggestions()">
+                    <div id="careerSuggestions" style="display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg-card);border:1px solid var(--border-medium);border-radius:var(--radius-md);max-height:240px;overflow-y:auto;z-index:10;backdrop-filter:blur(20px);"></div>
+                </div>
+                <p style="font-size:0.78rem;color:var(--text-tertiary);margin:12px 0;">Popular categories:</p>
+                <div class="career-tags" id="careerTags">
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'Software Development')">Software Development</span>
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'AI & ML')">AI & ML</span>
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'Data Science')">Data Science</span>
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'Cyber Security')">Cyber Security</span>
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'UI/UX Design')">UI/UX Design</span>
+                    <span class="career-tag" onclick="selectCareerFromTag(this,'Other')">Other</span>
+                </div>
+                <div style="display:flex;gap:12px;margin-top:20px;">
+    <button class="btn btn--secondary btn--sm" onclick="prevStep(1)">
+        ← Back
+    </button>
+
+    <button
+        class="btn btn--primary btn--full"
+        id="careerContinueBtn"
+        onclick="openCareerDetails()"
+        disabled>
+        Continue →
+    </button>
+</div>
+            </div>
+              
+         
+            <!-- Step 3: Career Details -->
+            <div class="form-card" id="formStep3" style="display:none;">
+                <h2 style="font-weight:700;">Career Details</h2>
+                <p style="color:var(--text-tertiary);">About <strong id="selectedCareerName">your career</strong></p>
+                <div class="glass-card" style="margin-top:16px;"><h4>📋 Overview</h4><p id="careerOverview" style="color:var(--text-secondary);">Excellent opportunities.</p></div>
+                <div class="form-row" style="margin-top:16px;">
+                    <div class="glass-card"><h4>💰 Salary</h4><p style="color:var(--primary-light);">₹4L – ₹25L+</p></div>
+                    <div class="glass-card"><h4>📈 Growth</h4><p style="color:#22C55E;">Excellent</p></div>
+                </div>
+                <p style="font-size:0.82rem;color:var(--text-tertiary);margin-top:12px;">🎓 Best Colleges • 📚 Certifications</p>
+                <div style="display:flex;gap:12px;margin-top:20px;">
+                    <button class="btn btn--secondary btn--sm" onclick="prevStep(2)">← Back</button>
+                   <button class="btn btn--primary btn--full" onclick="openCareerDetails()">
+    Continue →
+</button>
+ </div>
+            </div>
+
+            <!-- Step 4: Stay Connected -->
+            <div class="form-card" id="formStep4" style="display:none;">
+                <h2 style="font-weight:700;">Stay Connected</h2>
+                <p style="color:var(--text-tertiary);">We'll keep you updated.</p>
+                <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="email"></div>
+                <div class="form-group"><label class="form-label">WhatsApp (Optional)</label><input type="tel" class="form-input" id="whatsapp"></div>
+                <div class="checkbox-group" style="margin-bottom:20px;">
+                    <label class="checkbox-item"><input type="checkbox" checked> Career Updates</label>
+                    <label class="checkbox-item"><input type="checkbox" checked> Internship Alerts</label>
+                    <label class="checkbox-item"><input type="checkbox"> Scholarship Alerts</label>
+                </div>
+                <div style="display:flex;gap:12px;">
+                    <button class="btn btn--secondary btn--sm" onclick="prevStep(3)">← Back</button>
+                    <button class="btn btn--primary btn--full" onclick="openCareerDetails()">
+    Continue →
+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer and chatbot identical to previous pages -->
+   <footer class="footer">
+       
+        <div class="footer__grid">
+            <div><h4 class="footer__heading">🎓 CareerPath</h4><p class="footer__text">Build Your Future. Build Yourself. The most comprehensive, free career development platform for students across India.</p></div>
+            <div class="footer-contact-card">
+    <h4>📞 Quick Contact</h4>
+
+    <p>
+        <strong>Phone</strong><br>
+       <p class="footer__text"> +91 98765 43210</p>
+    </p>
+
+    <p>
+        <strong>Email</strong><br>
+       <p class="footer__text"> support@careerpath.com</p>
+    </p>
+</div>
+            <div><h4 class="footer__heading">Quick Links</h4><a href="index.html" class="footer__link">Home</a><a href="about.html" class="footer__link">About</a><a href="careers.html" class="footer__link">Careers</a><a href="contact.html" class="footer__link">Contact</a></div>
+            <div>
+                <h4 class="footer__heading">Quick Enquiry</h4>
+                <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" id="footerName" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number" id="footerPhone" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><input type="email" class="form-input" placeholder="Email Address" id="footerEmail" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><textarea class="form-textarea" placeholder="Your Requirement" id="footerRequirement" rows="2" style="padding:8px 12px;font-size:0.82rem;min-height:60px;"></textarea></div>
+                <button class="btn btn--primary btn--sm btn--full" onclick="submitFooterForm()">📩 Submit</button>
+                <p id="footerSuccess" style="display:none;color:#22C55E;text-align:center;margin-top:8px;font-size:0.8rem;">✅ Submitted!</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 CareerPath. All rights reserved.</p>
+            <p>Made with ❤️ for students | <span style="color:var(--primary-light);">Build Your Future. Build Yourself.</span></p>
+        </div>
+   
+    </footer>
+
+    <div class="ai-chatbot" id="aiChatbot">
+        <button class="ai-chatbot__button" id="aiChatbotButton">🤖</button>
+        <div class="ai-chatbot__window" id="aiChatbotWindow">
+            <div class="ai-chatbot__header"><span>🤖 AI Career Assistant</span><button class="ai-chatbot__close" id="aiChatbotClose">✕</button></div>
+            <div class="ai-chatbot__messages" id="aiChatMessages">
+                <div class="ai-chatbot__message ai-chatbot__message--bot">👋 Hello! Ask me about careers.</div>
+            </div>
+            <div class="ai-chatbot__input-area">
+                <input type="text" class="ai-chatbot__input" id="aiChatInput" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')sendAiMessage()">
+                <button class="ai-chatbot__send" onclick="sendAiMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('navbar__links--open');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath — Student Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-orb bg-orb--1"></div><div class="bg-orb bg-orb--2"></div><div class="bg-orb bg-orb--3"></div><div class="grid-bg"></div>
+
+    <nav class="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo"><span class="navbar__logo-icon">🎓</span> CareerPath</a>
+            <ul class="navbar__links" id="navLinks">
+                <li><a href="index.html" class="navbar__link">Home</a></li>
+                <li><a href="about.html" class="navbar__link">About</a></li>
+                <li><a href="careers.html" class="navbar__link">Careers</a></li>
+                <li><a href="contact.html" class="navbar__link">Contact</a></li>
+            </ul>
+            <a href="student-form.html" class="navbar__cta">🚀 Get Started</a>
+            <button class="navbar__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+<!-- Step 3: Career Details -->
+ <section class="careerdetails">
+
+<div class="container">
+
+<div class="career-header">
+
+<div class="career-icon">
+🛡️
+</div>
+
+<h1 id="careerTitle">Loading...</h1>
+
+<p class="career-subtitle">
+★★★★★ High Demand Career
+</p>
+<div class="match-section">
+
+    <div class="match-header">
+
+        <span>🎯 Career Match</span>
+
+        <span id="matchPercent">96%</span>
+
+    </div>
+
+    <div class="match-bar">
+
+        <div id="matchFill" class="match-fill"></div>
+
+    </div>
+
+</div>
+
+<div class="career-stats">
+
+    <div class="career-stat">
+        <h3>💰 Average Salary</h3>
+        <p id="avgSalary">Loading...</p>
+    </div>
+
+    <div class="career-stat">
+        <h3>📈 Growth</h3>
+        <p>Excellent</p>
+    </div>
+
+    <div class="career-stat">
+        <h3>🌍 Global Scope</h3>
+        <p>Very High</p>
+    </div>
+
+</div>
+
+</div>
+
+<!-- Overview -->
+
+<div class="career-card">
+
+<h2>📖 Overview</h2>
+
+<p id="careerOverview">
+
+Loading...
+
+</p>
+
+</div>
+
+
+<!-- Degrees -->
+
+<div class="career-card">
+
+<h2>🎓 Degrees & Courses</h2>
+
+<div id="degreeContainer"
+class="career-grid">
+
+</div>
+
+</div>
+
+
+<!-- Eligibility -->
+
+<div class="career-card">
+
+<h2>✅ Eligibility Path</h2>
+
+<div id="eligibilityTimeline">
+
+</div>
+
+</div>
+
+
+<!-- Skills -->
+
+<div class="career-card">
+
+<h2>⭐ Skills Required</h2>
+
+<div id="skillsContainer"
+class="tag-container">
+
+</div>
+
+</div>
+
+
+<!-- Roadmap -->
+
+<div class="career-card">
+
+<h2>🛣 Career Roadmap</h2>
+
+<div id="roadmapContainer">
+
+</div>
+
+</div>
+
+
+<!-- Salary -->
+
+<div class="career-card">
+
+<h2>💰 Salary Growth</h2>
+
+<div class="career-grid">
+
+<div class="salary-box">
+
+<h4>Entry</h4>
+
+<p id="salaryEntry"></p>
+
+</div>
+
+<div class="salary-box">
+
+<h4>Mid Level</h4>
+
+<p id="salaryMid"></p>
+
+</div>
+
+<div class="salary-box">
+
+<h4>Senior</h4>
+
+<p id="salarySenior"></p>
+
+</div>
+
+<div class="salary-box">
+
+<h4>International</h4>
+
+<p id="salaryInternational"></p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Future -->
+
+<div class="career-card">
+
+<h2>📈 Future Scope</h2>
+
+<p id="futureScope">
+
+</p>
+
+</div>
+
+
+<!-- Resources -->
+
+<div class="career-card">
+
+<h2>📚 Learning Resources</h2>
+
+<div id="resourceContainer">
+
+</div>
+
+</div>
+
+
+<!-- Related -->
+
+<div class="career-card">
+
+<h2>🔄 Related Careers</h2>
+
+<div id="relatedContainer"
+class="tag-container">
+
+</div>
+
+</div>
+
+
+
+
+<div class="career-navigation">
+<button class="btn btn--secondary" onclick="history.back()">
+    ← Back
+</button>
+<button
+    class="btn btn--primary btn--full"
+    onclick="window.location.href='thank-you.html'">
+    Continue →
+</button>
+</div>
+
+</div>
+
+</section>
+<!-- Footer and chatbot identical to previous pages -->
+   <footer class="footer">
+       
+        <div class="footer__grid">
+            <div><h4 class="footer__heading">🎓 CareerPath</h4><p class="footer__text">Build Your Future. Build Yourself. The most comprehensive, free career development platform for students across India.</p></div>
+            <div class="footer-contact-card">
+    <h4>📞 Quick Contact</h4>
+
+    <p>
+        <strong>Phone</strong><br>
+       <p class="footer__text"> +91 98765 43210</p>
+    </p>
+
+    <p>
+        <strong>Email</strong><br>
+       <p class="footer__text"> support@careerpath.com</p>
+    </p>
+</div>
+            <div><h4 class="footer__heading">Quick Links</h4><a href="index.html" class="footer__link">Home</a><a href="about.html" class="footer__link">About</a><a href="careers.html" class="footer__link">Careers</a><a href="contact.html" class="footer__link">Contact</a></div>
+            <div>
+                <h4 class="footer__heading">Quick Enquiry</h4>
+                <div class="form-group"><input type="text" class="form-input" placeholder="Your Name" id="footerName" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><input type="tel" class="form-input" placeholder="Phone Number" id="footerPhone" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><input type="email" class="form-input" placeholder="Email Address" id="footerEmail" style="padding:8px 12px;font-size:0.82rem;"></div>
+                <div class="form-group"><textarea class="form-textarea" placeholder="Your Requirement" id="footerRequirement" rows="2" style="padding:8px 12px;font-size:0.82rem;min-height:60px;"></textarea></div>
+                <button class="btn btn--primary btn--sm btn--full" onclick="submitFooterForm()">📩 Submit</button>
+                <p id="footerSuccess" style="display:none;color:#22C55E;text-align:center;margin-top:8px;font-size:0.8rem;">✅ Submitted!</p>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 CareerPath. All rights reserved.</p>
+            <p>Made with ❤️ for students | <span style="color:var(--primary-light);">Build Your Future. Build Yourself.</span></p>
+        </div>
+   
+    </footer>
+
+    <div class="ai-chatbot" id="aiChatbot">
+        <button class="ai-chatbot__button" id="aiChatbotButton">🤖</button>
+        <div class="ai-chatbot__window" id="aiChatbotWindow">
+            <div class="ai-chatbot__header"><span>🤖 AI Career Assistant</span><button class="ai-chatbot__close" id="aiChatbotClose">✕</button></div>
+            <div class="ai-chatbot__messages" id="aiChatMessages">
+                <div class="ai-chatbot__message ai-chatbot__message--bot">👋 Hello! Ask me about careers.</div>
+            </div>
+            <div class="ai-chatbot__input-area">
+                <input type="text" class="ai-chatbot__input" id="aiChatInput" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')sendAiMessage()">
+                <button class="ai-chatbot__send" onclick="sendAiMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="careerData.js"></script>
+    <script src="script.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const career = sessionStorage.getItem("selectedCareer");
+    console.log("Career from session:", career);
+
+    if (!career) {
+        document.getElementById("careerTitle").textContent = "No Career Selected";
+        document.getElementById("careerOverview").textContent =
+            "Please return to the careers page and pick a role.";
+        return;
+    }
+
+    fetch(`http://localhost:5000/api/careers/${encodeURIComponent(career)}`)
+        .then(response => response.json())
+        .then(result => {
+
+            const data = result.data;
+
+            // Career not found -> Generate with AI
+            if (!data) {
+
+                document.getElementById("careerTitle").textContent = "Generating...";
+                document.getElementById("careerOverview").textContent =
+                    "🤖 AI is generating this career. Please wait...";
+
+                fetch("http://localhost:5000/api/careers/generate", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        career: career
+                    })
+                })
+                .then(res => res.json())
+                .then(() => {
+                    setTimeout(() => {
+                        location.reload();
+                    }, 12000);
+                })
+                .catch(err => {
+
+                    console.error(err);
+
+                    document.getElementById("careerTitle").textContent = "Generation Failed";
+
+                    document.getElementById("careerOverview").textContent =
+                        "Unable to generate this career.";
+
+                });
+
+                return;
+            }
+
+            // -----------------------
+            // Career Details
+            // -----------------------
+
+            document.getElementById("careerTitle").textContent = career;
+            document.getElementById("careerOverview").textContent = data.overview;
+
+            // Degrees
+            const degreeContainer = document.getElementById("degreeContainer");
+            degreeContainer.innerHTML = "";
+
+            data.degrees.forEach(degree => {
+
+                degreeContainer.innerHTML += `
+                    <div class="career-card">
+                        <h3>🎓 ${degree.name}</h3>
+                        <p><strong>Duration:</strong> ${degree.duration}</p>
+                        <p><strong>Eligibility:</strong> ${degree.eligibility}</p>
+                        <p><strong>Best For:</strong> ${degree.bestFor}</p>
+                    </div>
+                `;
+
+            });
+
+            // Skills
+            const skillsContainer = document.getElementById("skillsContainer");
+            skillsContainer.innerHTML = "";
+
+            data.skills.forEach(skill => {
+
+                skillsContainer.innerHTML += `
+                    <span class="career-tag">${skill}</span>
+                `;
+
+            });
+
+            // Eligibility
+            const eligibilityTimeline = document.getElementById("eligibilityTimeline");
+            eligibilityTimeline.innerHTML = "";
+
+            data.eligibility.forEach(step => {
+
+                eligibilityTimeline.innerHTML += `
+                    <div class="timeline-step">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-text">${step}</div>
+                    </div>
+                `;
+
+            });
+
+            // Roadmap
+            const roadmapContainer = document.getElementById("roadmapContainer");
+            roadmapContainer.innerHTML = "";
+
+            data.roadmap.forEach(step => {
+
+                roadmapContainer.innerHTML += `
+                    <div class="timeline-step">
+                        <div class="timeline-circle"></div>
+                        <div class="timeline-text">${step}</div>
+                    </div>
+                `;
+
+            });
+
+            // Salary
+            document.getElementById("salaryEntry").textContent = data.salary.entry;
+            document.getElementById("salaryMid").textContent = data.salary.mid;
+            document.getElementById("salarySenior").textContent = data.salary.senior;
+            document.getElementById("salaryInternational").textContent = data.salary.international;
+
+            document.getElementById("avgSalary").textContent = data.salary.entry;
+            document.getElementById("matchPercent").textContent = "96%";
+
+            setTimeout(() => {
+                document.getElementById("matchFill").style.width = "96%";
+            }, 300);
+
+            // Future Scope
+            document.getElementById("futureScope").textContent = data.future;
+
+            // Resources
+            const resourceContainer = document.getElementById("resourceContainer");
+            resourceContainer.innerHTML = "";
+
+            data.resources.forEach(resource => {
+
+                resourceContainer.innerHTML += `
+                    <div class="resource-card">
+                        <h3>${resource.title}</h3>
+                        <p>${resource.type}</p>
+                    </div>
+                `;
+
+            });
+
+            // Related Careers
+            const relatedContainer = document.getElementById("relatedContainer");
+            relatedContainer.innerHTML = "";
+
+            data.related.forEach(item => {
+
+                relatedContainer.innerHTML += `
+                    <span class="career-tag">${item}</span>
+                `;
+
+            });
+
+        })
+        .catch(error => {
+
+            console.error("Error loading career:", error);
+
+            document.getElementById("careerTitle").textContent = "Server Error";
+            document.getElementById("careerOverview").textContent =
+                "Unable to load career data from the server.";
+
+        });
+
+    // Mobile Menu
+    document.getElementById("hamburger").addEventListener("click", () => {
+        document.getElementById("navLinks").classList.toggle("navbar__links--open");
+    });
+
+});
+</script>
+</body>
+</html>
