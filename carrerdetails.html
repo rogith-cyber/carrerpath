@@ -329,31 +329,39 @@ document.addEventListener("DOMContentLoaded", function () {
                     "🤖 AI is generating this career. Please wait...";
 
                 fetch("https://carrerpath-backend.onrender.com/api/careers/generate", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        career: career
-                    })
-                })
-                .then(res => res.json())
-                .then(() => {
-                    setTimeout(() => {
-                        location.reload();
-                    }, 12000);
-                })
-                .catch(err => {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        career: career
+    })
+})
+.then(async res => {
 
-                    console.error(err);
+    const result = await res.json();
 
-                    document.getElementById("careerTitle").textContent = "Generation Failed";
+    console.log("Generate Response:", result);
 
-                    document.getElementById("careerOverview").textContent =
-                        "Unable to generate this career.";
+    if (!res.ok) {
+        throw new Error(result.message || "Generation failed");
+    }
 
-                });
+    setTimeout(() => {
+        location.reload();
+    }, 2000);
 
+})
+.catch(err => {
+
+    console.error("AI Generate Error:", err);
+
+    document.getElementById("careerTitle").textContent = "Generation Failed";
+
+    document.getElementById("careerOverview").textContent =
+        err.message;
+
+});
                 return;
             }
 
