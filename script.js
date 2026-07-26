@@ -1,4 +1,4 @@
-const API_BASE = "http://https://carrerpath-backend.onrender.com/api";
+const API_BASE = "https://carrerpath-backend.onrender.com/api";
 
 // ========== GLOBAL NAVIGATION (for multi‑page) ==========
 // Since each page is a separate HTML, we use simple links.
@@ -135,7 +135,7 @@ async function submitFooterForm() {
 
     try {
 
-        const response = await fetch("http://https://carrerpath-backend.onrender.com/api/contact", {
+        const response = await fetch("https://carrerpath-backend.onrender.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
