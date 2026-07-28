@@ -1004,3 +1004,16 @@ box-shadow:0 0 20px rgba(37,99,235,.4);
     }
 
 }
+
+.responsive-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    align-items:start;
+}
+
+@media(max-width:768px){
+    .responsive-grid{
+        grid-template-columns:1fr;
+    }
+}
