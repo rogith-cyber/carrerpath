@@ -926,3 +926,81 @@ box-shadow:0 0 20px rgba(37,99,235,.4);
     background:#2563EB;
     border-radius:20px;
 }
+
+/* ============================= */
+/* MOBILE RESPONSIVE FIX */
+/* ============================= */
+
+@media (max-width:768px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .container,
+    .app-wrapper{
+        width:100%;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+
+    /* ABOUT PAGE */
+    .about-section,
+    .about-container,
+    .about-grid{
+        display:block !important;
+        width:100%;
+    }
+
+    .about-card,
+    .about-content,
+    .about-text{
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+
+    /* CONTACT PAGE */
+    .contact-container,
+    .contact-grid{
+        display:block !important;
+        width:100%;
+    }
+
+
+    .contact-card,
+    .contact-form,
+    .form-card{
+        width:100% !important;
+        max-width:100% !important;
+        box-sizing:border-box;
+    }
+
+
+    input,
+    textarea,
+    select{
+        width:100% !important;
+        box-sizing:border-box;
+    }
+
+
+    /* HEADINGS */
+    h1{
+        font-size:2rem;
+        line-height:1.2;
+    }
+
+    h2{
+        font-size:1.4rem;
+    }
+
+
+    /* chatbot */
+    .ai-chatbot{
+        right:15px;
+        bottom:15px;
+    }
+
+}
